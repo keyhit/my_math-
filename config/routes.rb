@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'tasks/index'
   get 'tasks/new'
+  get 'tasks/task_1'
   get 'tasks/create'
   get 'tasks/destroy'
   resources :tasks

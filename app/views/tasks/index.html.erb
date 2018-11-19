@@ -2,13 +2,13 @@
 <p>Find me in app/views/tasks/index.html.erb</p>
 <ul>
   <li>
-    <%= link_to 'Task 1', controller: 'tasks', action: 'new' %>
+    <%= link_to 'Task 1', controller: 'tasks', action: 'task_1' %>
   </li>
 </ul>
 
 <ul>
   <li>
-    <%= link_to 'Task 1', tasks_new_path %>
+    <%= link_to 'new', tasks_new_path %>
   </li>
 </ul>
 
@@ -21,6 +21,10 @@
     <th>Action</th>
   </tr>
   <tr>
-    
+    <% @tasks.each do |task| %>
+    <td><%= task %></td>
+    <% end %>
   </tr>
-</table>>
+</table>
+<%= @volume %>
+<%= @square %>
