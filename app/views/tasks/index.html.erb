@@ -20,11 +20,17 @@
     <th>Result</th>
     <th>Action</th>
   </tr>
-  <tr>
-    <% @tasks.each do |task| %>
-    <td><%= task %></td>
-    <% end %>
-  </tr>
+  <% @tasks.each do |task| %>
+    <tr>
+      <td><%= task.id %></td>
+      <td><%= task.condition %></td>
+      <td><%= task.input %></td>
+      <td><%= task.result %></td>
+      <td><%= link_to 'Destroy', task_path(task),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
 </table>
 <%= @volume %>
 <%= @square %>

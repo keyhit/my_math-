@@ -50,6 +50,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'keyhit_pain', '~> 1.0', '>= 1.0.1'
   gem 'colorize', '~> 0.8.1'
+  gem 'pry'
 end
 
 group :test do

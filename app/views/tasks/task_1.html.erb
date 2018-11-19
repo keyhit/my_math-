@@ -1,2 +1,18 @@
 <h1>Tasks#task_1</h1>
 <p>Find me in app/views/tasks/tsak_1.html.erb</p>
+
+<%= form_with scope: :tasks, url: :tasks_task_1_create, local: true do |form| %>
+  <p>
+    <%= form.label :сondition, "Task conditions" %><br>
+    <%= form.text_area :condition, cols: 60, rows: 3, value: 'We have length edge of cube equal = "a" units . Find volume and square of cube.'%>
+  </p>
+
+  <p>
+    <%= form.label :input, "Input number" %><br>
+    <%= form.text_field :input %>
+  </p>
+
+  <p>
+    <%= form.submit "Calculate"  %>
+  </p>
+<% end %>
