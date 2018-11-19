@@ -1,33 +1,45 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
-<ul>
-  <li>
-    <%= link_to 'Task 1', controller: 'tasks', action: 'task_1' %>
+<!-- <h1>Tasks#index</h1>
+<p>Find me in app/views/tasks/index.html.erb</p> -->
+<ul  class="nav justify-content-center">
+  <li class = "nav-item">
+    <%= link_to 'Task 1',
+      controller: 'tasks',
+      action: 'task_1',
+      class: 'nav-link active'%>
   </li>
-    <li>
-    <%= link_to 'Task 2', controller: 'tasks', action: 'task_2' %>
-  </li>
+<!--   <li class = "nav-item">
+    <%#= link_to 'Task 2',
+      controller: 'tasks',
+      action: 'task_2',
+      :class => 'nav-link active'%>
+  </li> -->
 </ul>
-
-<table>
-  <tr>
-    <th>Index</th>
-    <th>Task</th>
-    <th>Condition</th>
-    <th>Input</th>
-    <th>Result</th>
-    <th>Action</th>
-  </tr>
-  <% @tasks.each do |task| %>
+<table class="table table-striped">
+  <thead>
     <tr>
-      <td><%= task.id %></td>
-      <td><%= task.number_task %></td>
-      <td><%= task.condition %></td>
-      <td><%= task.input %></td>
-      <td><%= task.result %></td>
-      <td><%= link_to 'Destroy', task_path(task),
-                    method: :delete,
-                    data: { confirm: 'Are you sure?' } %></td>
+      <th scope="col">Index</th>
+      <th scope="col">Task</th>
+      <th scope="col">Condition</th>
+      <th scope="col">Input</th>
+      <th scope="col">Result</th>
+      <th scope="col">Action</th>
     </tr>
-  <% end %>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.id %></td>
+        <th  scope="row"><%= task.number_task %></td>
+        <td><%= task.condition %></td>
+        <td><%= task.input %></td>
+        <td><%= task.result %></td>
+        <td><%= link_to 'Destroy',
+              task_path(task),
+              method: :delete,
+              data: { confirm: 'Are you sure?' },
+              type: "button",
+              class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>

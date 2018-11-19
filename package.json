@@ -1,5 +1,7 @@
 {
   "name": "my_math",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "node": "^11.1.0"
+  }
 }
