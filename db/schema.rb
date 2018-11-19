@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2018_11_18_213712) do
 
   create_table "tasks", force: :cascade do |t|
+    t.text "number_task"
     t.text "condition"
     t.text "input"
     t.text "result"

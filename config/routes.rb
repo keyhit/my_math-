@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'tasks/destroy'
   get 'tasks/task_1'
   post 'tasks/task_1_create'
+  get 'tasks/task_2'
+  post 'tasks/task_2_create'
   resources :tasks
   root 'tasks#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

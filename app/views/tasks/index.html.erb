@@ -4,17 +4,15 @@
   <li>
     <%= link_to 'Task 1', controller: 'tasks', action: 'task_1' %>
   </li>
-</ul>
-
-<ul>
-  <li>
-    <%= link_to 'new', tasks_new_path %>
+    <li>
+    <%= link_to 'Task 2', controller: 'tasks', action: 'task_2' %>
   </li>
 </ul>
 
 <table>
   <tr>
-    <th>index</th>
+    <th>Index</th>
+    <th>Task</th>
     <th>Condition</th>
     <th>Input</th>
     <th>Result</th>
@@ -23,6 +21,7 @@
   <% @tasks.each do |task| %>
     <tr>
       <td><%= task.id %></td>
+      <td><%= task.number_task %></td>
       <td><%= task.condition %></td>
       <td><%= task.input %></td>
       <td><%= task.result %></td>
@@ -32,5 +31,3 @@
     </tr>
   <% end %>
 </table>
-<%= @volume %>
-<%= @square %>
