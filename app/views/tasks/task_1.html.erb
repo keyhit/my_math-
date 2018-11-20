@@ -1,4 +1,4 @@
-<h1>Tasks#task_1</h1>
+<h1>Task by book # <%= @task %></h1>
 <p>Find me in app/views/tasks/tsak_1.html.erb</p>
 
 <%= form_with scope: :tasks,
@@ -17,7 +17,7 @@
     <%= form.text_field :input,
       class: "form-control" %>
   </p>
-
+  <%= form.hidden_field :number_task, value: @task %>
   <p>
     <%= form.submit "Calculate",
       class: "btn btn-primary" %>
